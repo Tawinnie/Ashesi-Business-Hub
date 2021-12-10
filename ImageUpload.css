@@ -25,6 +25,14 @@ form, .content {
     background: white;
     border-radius: 0px 0px 10px 10px;
   }
+  .dropdown{
+    margin: 10px 0px 10px 0px;
+  }
+  .dropdown label{
+    display: block;
+    text-align: left;
+    margin: 3px;
+  }
 .input-group {
     margin: 10px 0px 10px 0px;
   }

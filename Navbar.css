@@ -12,7 +12,9 @@
 body{
    background-image: url("./images/bkg.png");
 }
-
+.body.primary-nav-expanded .ic-app-header__logomark {
+  height: 85px;
+}
 .wrapper{
   display: flex;
   position: relative;
@@ -91,6 +93,7 @@ body{
   color: #934444;
   border-bottom: 1px solid #e0e4e8;
 }
+
 
 .wrapper .main_content .search-container{
   flex: right;
@@ -191,14 +194,28 @@ body{
   }
 .upload{
     width: 200px;
-    height:200px ;
+    height: 200px ;
     padding: 5px;
 }
 .upload img{
     width: 100px;
     height: 100px;
 }
-a{
+.a{
     text-decoration: none;
     color:black ;
+}
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+.btn{
+  text-align: center;
+}
+.active,.btn:hover {
+  background-color: #666;
+  color: white;
 }
