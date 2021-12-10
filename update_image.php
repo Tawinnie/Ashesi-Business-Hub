@@ -1,9 +1,11 @@
 <?php
-include "upload.php";
 
-  // Create database connection
-  $db = mysqli_connect("localhost", "root", "", "business");
+include "update.php";
+
+$db = mysqli_connect("localhost", "root", "", "business");
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -13,10 +15,10 @@ include "upload.php";
 <body>
    
     <div class="header">
-  	   <h2>Upload Your Product</h2>
+  	    <h2>Update Your Product</h2>
     </div>
-              <!--get data form the input of the user-->
-       <form method="POST" action="upload.php" enctype="multipart/form-data">
+<!-- form to collect detaila about the product-->
+       <form method="POST" action="update.php" enctype="multipart/form-data">
             <div class="input-group">
                 <label>Product Name</label>
                 <input type="text" name="productname" required >
@@ -24,13 +26,16 @@ include "upload.php";
 
             <div class="input-group">
                 <label>Price</label>
-                <input type="text" name="price" placeholder="In Ghc" required>
+                <input type="text" name="price" placeholder="In Ghc" pattern="[0-9]+" required>
             </div>
 
             <div class="input-group select-boxes col-md-6">
                 <label>Category</label>
                 <?php
+                include "dbconnect.php";
+                $db = mysqli_connect('localhost', 'root', '', 'business');
                 //create a dropdown of categories displayed from database
+
                 $category='';
                 $query="SELECT category_name FROM category ORDER BY category_name ASC";
                 $result=mysqli_query($db,$query);
@@ -40,10 +45,10 @@ include "upload.php";
                 }
                ?>
                     <select name="category" id="category" class="form-control action">
-                        <option value="">Select Category</option>
-                        <?php echo $category; ?>
+                    <option value="">Select Category</option>
+                    <?php echo $category; ?>
                     </select>
-            </div>
+           </div>
 
             <div class="input-group">
                 <label>Location</label>
@@ -66,9 +71,13 @@ include "upload.php";
             </div>
 
             <div>
-                <input type="submit" class="btn" name="submit" value="Upload">
+                <input type="submit" class="btn" name="update" value="Update">
+
             </div>
                     
-            </form>
+        </form>
+           
+    
 </body>
 </html>
+

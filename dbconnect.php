@@ -13,7 +13,8 @@
 
 	if($dbconnect) 
 	{
-		echo "database connected successfuly";
+		return;
+	
 	}
 	else 
 	{
