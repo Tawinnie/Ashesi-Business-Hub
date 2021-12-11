@@ -6,7 +6,7 @@ include "dbconnect.php";
 session_start();
 
 
-$db = mysqli_connect('localhost', 'root', '', 'business');
+$db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 $id=$_SESSION['id'];
 
 // if(isset($_POST['deletebtn']))
@@ -39,7 +39,7 @@ include "dbconnect.php";
 session_start();
 
 
-$db = mysqli_connect('localhost', 'root', '', 'business');
+$db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 $id=$_SESSION['id'];
 
 // if(isset($_POST['deletebtn']))
