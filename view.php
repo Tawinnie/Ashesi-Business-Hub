@@ -169,7 +169,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
             function closeForm() {
             document.getElementById("myForm").style.display = "none";
             }
-            </script>
+      </script>
 </div>
 </body>
 </html>
