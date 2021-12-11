@@ -2,7 +2,7 @@
 
 include "update.php";
 
-$db = mysqli_connect("localhost", "root", "", "business");
+$db = mysqli_connect("localhost", "root", "Tawinnie", "business");
 
 ?>
 
