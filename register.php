@@ -30,7 +30,7 @@ include('server.php')
 
 	  <div class="input-group">
   	  <label>Your Location</label>
-  	  <input type="text" name="location"  placeholder="e.g wangari mathai C3" value="<?php echo $location; ?>">
+  	  <input type="text" name="location" placeholder="e.g wangari mathai C3" value="<?php echo $location; ?>">
   	</div>
 
   	<div class="input-group">
