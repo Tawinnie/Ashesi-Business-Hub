@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -163,6 +163,3 @@ html {
     </body>
 <html>
   
-
-
->>>>>>> d60c2e09840b0abb33a1ba7c05e35ee98ad71551

@@ -33,7 +33,7 @@ $db = mysqli_connect("localhost", "root", "Tawinnie", "business");
                 <label>Category</label>
                 <?php
                 include "dbconnect.php";
-                $db = mysqli_connect('localhost', 'root', '', 'business');
+                $db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
                 //create a dropdown of categories displayed from database
 
                 $category='';

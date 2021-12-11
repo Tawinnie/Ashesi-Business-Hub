@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 include "upload.php";
 
@@ -72,5 +72,4 @@ include "upload.php";
                     
             </form>
 </body>
->>>>>>> d60c2e09840b0abb33a1ba7c05e35ee98ad71551
 </html>
