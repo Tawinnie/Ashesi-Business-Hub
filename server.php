@@ -11,7 +11,7 @@ $location = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'business');
+$db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) 
