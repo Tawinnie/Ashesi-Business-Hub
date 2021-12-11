@@ -4,7 +4,7 @@
 include "dbconnect.php";
 session_start();
 // connect to database
-$db = mysqli_connect('localhost', 'root', '', 'business');
+$db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 //if the button is not clicked
   if (!isset($_POST["submit"]))
   {
@@ -56,7 +56,7 @@ $db = mysqli_connect('localhost', 'root', '', 'business');
 include "dbconnect.php";
 session_start();
 // connect to database
-$db = mysqli_connect('localhost', 'root', '', 'business');
+$db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 //if the button is not clicked
   if (!isset($_POST["submit"]))
   {
