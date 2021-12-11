@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
  //editing product details
 include "dbconnect.php";
