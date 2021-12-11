@@ -5,7 +5,7 @@
 include "dbconnect.php";
 session_start();
 
-$db = mysqli_connect('localhost', 'root', '', 'business');
+$db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 //get product id to be deleted
     $id=$_GET['id'];
         $sql= "DELETE FROM product WHERE product_id='$id'";
@@ -26,7 +26,7 @@ $db = mysqli_connect('localhost', 'root', '', 'business');
 include "dbconnect.php";
 session_start();
 
-$db = mysqli_connect('localhost', 'root', '', 'business');
+$db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 //get product id to be deleted
     $id=$_GET['id'];
         $sql= "DELETE FROM product WHERE product_id='$id'";
