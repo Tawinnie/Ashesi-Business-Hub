@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php 
 //connect to database
 include "server.php";
@@ -185,5 +185,4 @@ include "server.php";
 </body>
 </html>
 
->>>>>>> d60c2e09840b0abb33a1ba7c05e35ee98ad71551
- 
+
