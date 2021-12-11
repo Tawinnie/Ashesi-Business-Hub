@@ -2,7 +2,7 @@
 //defining database connection parameters
    define("servername","localhost");
    define("username","root");
-   define("password","");
+   define("password","Tawinnie");
    define("dbname","business");
 
 ?>
