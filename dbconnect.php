@@ -7,11 +7,11 @@
 	$database = "business";
 
 	// Create a connection
-	$dbconnect = mysqli_connect($servername,$username, $password, $database);
+	$db = mysqli_connect($servername,$username, $password, $database);
 
 	//check if database is connected
 
-	if($dbconnect) 
+	if($db) 
 	{
 		return;
 	
