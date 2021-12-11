@@ -22,7 +22,7 @@
       //if(isset)
       //get an id of the user logged in
                   $id=$_SESSION['id'];
-                  //select all for what the user has uploade
+                  //select all for what the user has uploaded
                   $ql="SELECT * FROM product WHERE student_id=$id";
                   $result = mysqli_query($db, $ql);
                   while ($row=mysqli_fetch_assoc($result))
