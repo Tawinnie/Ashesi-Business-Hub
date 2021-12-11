@@ -4,7 +4,7 @@
 include "dbconnect.php";
 session_start();//statr a session
 
-$db = mysqli_connect('localhost', 'root', '', 'business');
+$db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 
   //get the id of the clicked product 
         $id=$_GET['id'];
@@ -180,7 +180,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 include "dbconnect.php";
 session_start();//statr a session
 
-$db = mysqli_connect('localhost', 'root', '', 'business');
+$db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 
   //get the id of the clicked product 
         $id=$_GET['id'];
