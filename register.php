@@ -1,7 +1,5 @@
 <<<<<<< HEAD
 <?php
-//source code: registration and login form using xampp server
-//by Mahmud Choudhury
 include('server.php') 
 
 ?>
