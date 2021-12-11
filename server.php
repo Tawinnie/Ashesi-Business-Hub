@@ -1,4 +1,5 @@
 <?php
+include "dbconnect.php";
 //start session 
 session_start();
 
@@ -21,6 +22,7 @@ if (isset($_POST['reg_user']))
         $fullname = $_REQUEST['fullname'];
         $username = $_REQUEST['username'];
         $email = $_REQUEST['email'];
+        $phone=$_REQUEST['phone'];
         $password_1 = $_REQUEST['password_1'];
         $password_2 = $_REQUEST['password_2'];
         $location = $_REQUEST['location'];
@@ -67,8 +69,8 @@ if (isset($_POST['reg_user']))
   {
   	$password = md5($password_1);//encrypt the password before saving in the database
      //inseert inot database
-  	$query = "INSERT INTO student (student_id, fullname,username, email, password, location) 
-  			  VALUES('$studentid','$fullname', '$username','$email','$password','$location')";
+  	$query = "INSERT INTO student (student_id, fullname,username, email, password, location,phonenumber) 
+  			  VALUES('$studentid','$fullname', '$username','$email','$password','$location','$phone')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "";

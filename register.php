@@ -29,8 +29,13 @@ include('server.php')
   	</div>
 
 	  <div class="input-group">
+  	  <label>Phone Number</label>
+  	  <input type="text" name="phone" value="<?php echo $phone; ?>">
+  	</div>
+
+	  <div class="input-group">
   	  <label>Your Location</label>
-  	  <input type="text" name="location" placeholder="e.g wangari mathai C3" value="<?php echo $location; ?>">
+  	  <input type="text" name="location"  placeholder="e.g wangari mathai C3" value="<?php echo $location; ?>">
   	</div>
 
   	<div class="input-group">

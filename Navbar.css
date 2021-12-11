@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-image: url("./images/bkg.png");
+}
+.body.primary-nav-expanded .ic-app-header__logomark {
+  height: 85px;
+}
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: #934444;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+  color: whitesmoke;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #e99ca1;
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
+  background-image: url("/images/browse.png");
+  width: 100%;
+  margin-left: 200px;
+}
+
+.header{
+  padding: 30px;
+  background: #fff;
+  font-weight: bolder;
+  color: #934444;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+
+.wrapper .main_content .search-container{
+  flex: right;
+  margin: 50px;
+  color: #717171;
+  line-height: 50px;
+}
+
+.main_content .title{
+    text-align: center;
+    font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.main_content.container.category{
+    text-align: justify;
+    margin: 15px 5px;
+    padding-left: 25px;
+}
+.nav link:hover{
+    background: #555;
+}
+
+.body{
+    background: #680e0e;
+    color: black;
+    
+      
+}
+ .navbar-collapse{
+     justify-content: flex-end;
+ }
+ .fw-bold{
+     text-align: center;
+ }
+ .container {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+ }  
+ .image{
+    /* The image used */
+    background-image: url("./images/Ashesibusiness.jpg");
+  
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* Needed to position the navbar */
+    position: relative;
+  }
+      
+.carousels {
+    width: 20px;
+    height: 20px;
+}
+ .button{
+    box-sizing: border-box;
+    padding-right: 50%;
+    align-items: center;
+}
+  
+  /* Style the search field */
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #6d1014;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #680e0e;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.upload{
+    width: 200px;
+    height: 200px ;
+    padding: 5px;
+}
+.upload img{
+    width: 100px;
+    height: 100px;
+}
+.a{
+    text-decoration: none;
+    color:black ;
+}
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+.btn{
+  text-align: center;
+}
+.active,.btn:hover {
+  background-color: #666;
+  color: white;
+}

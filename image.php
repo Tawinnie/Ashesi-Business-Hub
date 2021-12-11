@@ -3,7 +3,9 @@
 include "upload.php";
 
   // Create database connection
-  $db = mysqli_connect("localhost", "root", "Tawinnie", "business");
+  //$db = mysqli_connect($servername,$username, $password, $database);
+
+  $db = mysqli_connect('localhost','root','Tawinnie','business');
 ?>
            
 <!DOCTYPE html>

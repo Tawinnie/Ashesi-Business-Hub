@@ -1,6 +1,5 @@
-
 <?php 
-//connect ot database
+//connect to database
 include('server.php');
 ?>
 
@@ -43,5 +42,3 @@ include('server.php');
 
 </body>
 </html>
-
-
