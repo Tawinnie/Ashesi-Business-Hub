@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <?php
-
+//view account details
+           
 ?>
 <!DOCTYPE html>
 <html>
