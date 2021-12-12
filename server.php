@@ -18,15 +18,13 @@ $db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 if (isset($_POST['reg_user'])) 
 {
         // receive all input values from the form
-        $studentid= $_REQUEST['studentid'];
-        $fullname = $_REQUEST['fullname'];
-        $username = $_REQUEST['username'];
-        $email = $_REQUEST['email'];
-        $phone=$_REQUEST['phone'];
-        $password_1 = $_REQUEST['password_1'];
-        $password_2 = $_REQUEST['password_2'];
-        $location = $_REQUEST['location'];
-
+        $studentid = mysqli_real_escape_string($db, $_POST['studentid']);
+        $fullname = mysqli_real_escape_string($db, $_POST['fullname']);
+        $username = mysqli_real_escape_string($db, $_POST['username']);
+        $email = mysqli_real_escape_string($db, $_POST['email']);
+        $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
+        $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+        $location = mysqli_real_escape_string($db, $_POST['location']);
 
         // form validation: ensure that the form is correctly filled ...
         // by adding (array_push()) corresponding error unto $errors array
@@ -69,8 +67,8 @@ if (isset($_POST['reg_user']))
   {
   	$password = md5($password_1);//encrypt the password before saving in the database
      //inseert inot database
-  	$query = "INSERT INTO student (student_id, fullname,username, email, password, location,phonenumber) 
-  			  VALUES('$studentid','$fullname', '$username','$email','$password','$location','$phone')";
+  	$query = "INSERT INTO student (student_id, fullname,username, email, password, location) 
+  			  VALUES('$studentid','$fullname', '$username','$email','$password','$location')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "";
@@ -86,7 +84,7 @@ if (isset($_POST['login_user']))
   //get password and email
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $password_1 = mysqli_real_escape_string($db, $_POST['password']);
-  //if the email and password is empty,shwo an erro
+  //if the email and password is empty,show an erro
     if (empty($email)) 
     {
         array_push($errors, "Email is required");
@@ -104,39 +102,17 @@ if (isset($_POST['login_user']))
 
         $result = mysqli_query($db, $sql);
 
-        if (mysqli_num_rows($result) === 1) 
+        if (mysqli_num_rows($result) == 1) 
         {
-
-            $row = mysqli_fetch_assoc($result);
-
-            if ($row['email'] === $email && $row['password'] === $password) 
-            {
-
-                echo "Logged in!";
-
-                $_SESSION['username'] = $row['username'];
-
-                $_SESSION['fullname'] = $row['fullname'];
-
-                $_SESSION['id'] = $row['id'];
-
-                header("Location: index.php");
-
-                exit();
-
-            }else
-                {
-
-                  header("Location: Login.php?error=Incorect email or password");
-
-                  exit();
-
-                }
-
-        }
-        }
-
-    }  
+            $_SESSION['username'] = $username;
+  	    $_SESSION['success'] = " ";
+  	  header('location: index.php');
+  	}else 
+        {
+  		array_push($errors, "Wrong username or password");
+  	}
+  }
+}
 
 ?>
         
