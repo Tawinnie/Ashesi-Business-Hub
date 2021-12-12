@@ -38,7 +38,9 @@ $db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
             $upload_image = move_uploaded_file($file["tmp_name"], $file_dest);
             if($upload_image)
                 {
-                    $sql="INSERT INTO product(image, product_name, price, location, description, student_id) VALUES('$upload_file_dest', '$prodname','$price','$location','$desc','$id')";
+                    echo "file moved to pictures folder";
+                    $sql="INSERT INTO product(image, product_name, price, location, description, student_id)
+                    VALUES('$upload_file_dest', '$prodname','$price','$location','$desc','$id')";
                     $status = mysqli_query($db,$sql);
                     if($status)
                         header("Location: index.php");
