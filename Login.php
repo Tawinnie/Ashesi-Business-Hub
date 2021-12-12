@@ -20,7 +20,7 @@ include('server.php');
   	<h2>Sign in</h2>
   </div>
 	 
-  <form method="POST" action="Navbar.php">
+  <form method="POST" action="index.php">
 	  <!---the error file checks if the submitted form does ot have erors-->
 		<?php include('errors.php');?>
 		<div class="input-group">
