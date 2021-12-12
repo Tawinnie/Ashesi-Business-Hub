@@ -38,7 +38,7 @@ if(isset($_POST['update']))
                 if($sql)
                 {
                     mysqli_close($db);//close connection
-                    header("location:Navbar.php");//redirect to home page
+                    header("location: index.php");//redirect to home page
                     exit;
                     
                 }else
