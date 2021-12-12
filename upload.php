@@ -36,6 +36,7 @@ $db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
         else
         {//inserting the uploaded files into the database
             $upload_image = move_uploaded_file($file["tmp_name"], $file_dest);
+            var_dump($upload_image);
             if($upload_image)
                 {
                     echo "file moved to pictures folder";
