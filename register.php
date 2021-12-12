@@ -17,7 +17,7 @@ include('server.php')
   	<?php include('errors.php'); ?>
       <div class="input-group">
   	  <label>Student ID</label>
-  	  <input type="text" name="studentid" value="<?php echo $studentid; ?>" pattern="[0-9]+">>
+  	  <input type="text" name="studentid" value="<?php echo $studentid; ?>" pattern="[0-9]+">
   	</div>
 	  <div class="input-group">
   	  <label>Fullname</label>
@@ -26,11 +26,6 @@ include('server.php')
   	<div class="input-group">
   	  <label>Username</label>
   	  <input type="text" name="username" value="<?php echo $username; ?>">
-  	</div>
-
-	  <div class="input-group">
-  	  <label>Phone Number</label>
-  	  <input type="text" name="phone" value="<?php echo $phone; ?>">
   	</div>
 
 	  <div class="input-group">
