@@ -41,7 +41,7 @@ $db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
                     $sql="INSERT INTO product(image, product_name, price, location, description, student_id) VALUES('$upload_file_dest', '$prodname','$price','$location','$desc','$id')";
                     $status = mysqli_query($db,$sql);
                     if($status)
-                        header("Location: Navbar.php");
+                        header("Location: index.php");
                 }
 
                
