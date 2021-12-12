@@ -46,7 +46,7 @@ if (isset($_POST['update']) && $_POST['update'] == 'Update')
                     $sql="UPDATE product SET product_name='$prodname', price='$price', image='$fileNameCmps', location='$location', description='$desc' WHERE student_id='$sid'";
                     $status = mysqli_query($db,$sql);
                     if($status)
-                        header("Location: Navbar.php");
+                        header("Location: index.php");
                 }
                 else
                 {
