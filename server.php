@@ -120,7 +120,7 @@ if (isset($_POST['login_user']))
 
                 $_SESSION['id'] = $row['id'];
 
-                header("Location: Navbar.php");
+                header("Location: index.php");
 
                 exit();
 
