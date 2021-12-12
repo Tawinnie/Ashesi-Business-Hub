@@ -66,7 +66,7 @@ include "server.php";
     <!-- side bar navigation menu-->
         <ul>
             <li>
-              <a class="btn" id="non" href="Navbar.php">Home</a>
+              <a class="btn" id="non" href="index.php">Home</a>
             </li>
             <li>
               <a class="btn" id="non" href="account.php">My Account</a>
@@ -82,7 +82,7 @@ include "server.php";
               
             </li>
             <li>
-              <p><a  id="non" href="index.php?logout='1'" style="color: white;">Log Out</a></p>
+              <p><a  id="non" href="Login.php?logout='1'" style="color: white;">Log Out</a></p>
             </li>
         </ul> 
       
