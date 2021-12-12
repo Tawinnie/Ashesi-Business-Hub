@@ -23,7 +23,7 @@
                   <a class="list-group-item list-group-item-action" data-toggle="list" href="myposts.php">Posted Items</a>
                   <a class="list-group-item list-group-item-action" data-toggle="list" href="accountsettings.php">Update Information</a>
                   <a class="list-group-item list-group-item-action" data-toggle="list" href="deleteaccount.php">Delete My Account</a>
-                  <a class="list-group-item list-group-item-action" data-toggle="list" href="index.php">Logout</a>
+                  <a class="list-group-item list-group-item-action" data-toggle="list" href="Login.php">Logout</a>
             </div>
               <div class="text-right mt-3">
                  <INPUT TYPE="button" VALUE="Cancel" onClick="history.go(-1);">
