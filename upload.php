@@ -40,7 +40,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Upload')
                 if($move_to_folder)
                 {
 
-                    $sql="INSERT INTO product(image, product_name, price, location, description, student_id) VALUES(' $fileNameCmps', '$prodname','$price','$location','$desc','$id')";
+                    $sql="INSERT INTO product(image, product_name, price, location, description, student_id) VALUES(' $dest_path', '$prodname','$price','$location','$desc','$id')";
                     $status = mysqli_query($db,$sql);
                     if($status)
                         header("Location: Navbar.php");
