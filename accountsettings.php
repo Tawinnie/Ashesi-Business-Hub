@@ -38,7 +38,7 @@ if(isset($_POST['update']))
                 if($sql)
                 {
                     mysqli_close($db);//close connection
-                    header("location: index.php");//redirect to home page
+                    header("location: Navbar.php");//redirect to home page
                     exit;
                     
                 }else
@@ -64,7 +64,7 @@ if(isset($_POST['update']))
 <div class="header">
       <h2>Update Your Information</h2>
 </div>
-<!--get information form form-->
+<!--get information from form-->
 <form method="POST" action="">
   <div class="card-body">
       <div class="form-group">
