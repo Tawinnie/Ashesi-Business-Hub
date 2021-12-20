@@ -1,5 +1,6 @@
 <?php
 include "dbconnect.php";
+include "errors.php";
 //start session 
 session_start();
 
@@ -66,7 +67,7 @@ if (isset($_POST['reg_user']))
   if (count($errors) == 0) 
   {
   	$password = md5($password_1);//encrypt the password before saving in the database
-     //inseert inot database
+           //inseert into database
   	$query = "INSERT INTO student (student_id, fullname,username, email, password, location) 
   			  VALUES('$studentid','$fullname', '$username','$email','$password','$location')";
   	mysqli_query($db, $query);
@@ -84,7 +85,7 @@ if (isset($_POST['login_user']))
   //get password and email
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $password_1 = mysqli_real_escape_string($db, $_POST['password']);
-  //if the email and password is empty,show an erro
+  //if the email and password is empty,show an error
     if (empty($email)) 
     {
         array_push($errors, "Email is required");
@@ -97,7 +98,7 @@ if (isset($_POST['login_user']))
     if (count($errors) == 0) 
     {
         $password = md5($password_1);//encrpt password 
-        //insert the data into database
+        //select the data into database
         $sql = "SELECT * FROM student WHERE email='$email' AND password='$password'";
 
         $result = mysqli_query($db, $sql);
@@ -105,8 +106,8 @@ if (isset($_POST['login_user']))
         if (mysqli_num_rows($result) == 1) 
         {
             $_SESSION['username'] = $username;
-  	    $_SESSION['success'] = "username ";
-  	  header('location: index.php');
+  	    $_SESSION['success'] = " ";
+  	  header('location: Navbar.php');
   	}else 
         {
   		array_push($errors, "Wrong username or password");
