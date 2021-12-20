@@ -72,10 +72,22 @@ $db = mysqli_connect("localhost", "root", "Tawinnie", "business");
 
    
             <div>
-               <a href=update.php?id='.$row["product_id"].'"><input type="submit" class="btn" name="update" value="Update"></a>
-                <!--<input type="submit" class="btn" name="update" value="Update">-->
-
-            </div>
+                
+                 <?php 
+              //select the attributes of a product uploded by a user, and show it on the home page
+                $ql="SELECT * FROM product";
+                $result = mysqli_query($db, $ql);
+                while ($row=mysqli_fetch_assoc($result))
+                {
+                  return'
+                  //trying to get the id that will redirect to the update.php page
+                     <div> 
+                      <a href="update.php?id='.$row["product_id"].'">
+                       <input type="submit" class="btn" name="update" value="Update">
+                      </a>
+                        <!--<input type="submit" class="btn" name="update" value="Update">-->
+                     </div>';
+                    }?>
                     
         </form>
            
