@@ -1,7 +1,10 @@
 
 <?php 
+//this is a home page
 //connect to database
-include "server.php";
+require "dbconnect.php";
+$db=("localhost", "root", "Tawinnie", "business");
+require "server.php";
 
   //session_start(); 
 
@@ -66,7 +69,7 @@ include "server.php";
     <!-- side bar navigation menu-->
         <ul>
             <li>
-              <a class="btn" id="non" href="index.php">Home</a>
+              <a class="btn" id="non" href="Navbar.php">Home</a>
             </li>
             <li>
               <a class="btn" id="non" href="account.php">My Account</a>
