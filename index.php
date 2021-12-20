@@ -163,6 +163,7 @@ include "server.php";
                 $result = mysqli_query($db, $ql);
                 while ($row=mysqli_fetch_assoc($result))
                 {
+			//this echoed a picture in a card, its price,description as uploaded by the user and view button, it worked on the localhost but when i went on live server nothing showed up, i tried everything i could but it couldn't reflect on the live server
                   echo '
                   <div class="col">
                      <div class="card shadow-sm">
