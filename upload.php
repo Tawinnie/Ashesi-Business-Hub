@@ -40,7 +40,8 @@ $db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
             var_dump($_FILES['image']['tmp_name']);
             if($upload_image)
                 {
-                    echo "file moved to pictures folder";
+                    //echo "file moved to pictures folder";
+              //i tried all i could but this insert query failed to work, i could not figure out what the problem was, i even tried with the FI too
                     $sql="INSERT INTO product(image, product_name, price, location, description, student_id)
                     VALUES('$upload_file_dest', '$prodname','$price','$location','$desc','$id')";
                     $status = mysqli_query($db,$sql);
