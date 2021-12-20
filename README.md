@@ -1,2 +1,2 @@
 Final Project
- My final project
+ My Web technologies' final project
