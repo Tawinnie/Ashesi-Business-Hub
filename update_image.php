@@ -70,8 +70,10 @@ $db = mysqli_connect("localhost", "root", "Tawinnie", "business");
                <br><br>
             </div>
 
+   
             <div>
-                <input type="submit" class="btn" name="update" value="Update">
+               <a href=update.php?id='.$row["product_id"].'"><input type="submit" class="btn" name="update" value="Update"></a>
+                <!--<input type="submit" class="btn" name="update" value="Update">-->
 
             </div>
                     
