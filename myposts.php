@@ -15,7 +15,11 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         
       <?php
-      include "server.php";
+        //connect to database
+	  include "dbconnect.php";
+	  $db =mysqli_connect("localhost","root",'Tawinnie","business");
+	      
+           include "server.php";
       //session_start();
 
       
