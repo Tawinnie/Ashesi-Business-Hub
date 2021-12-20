@@ -144,17 +144,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
     <div align=" center">
 
-    <h2>Message Window</h2>
+    <h2>Leave a Message</h2>
     <p>Interested in this product? Send a Message.</p>
 
     <button class="open-button" onclick="openForm()">Message Seller</button>
 
     <div class="chat-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+      <!--this form is only for a deom of the messaging feature-->
+        <form action=" " class="form-container">
                 <h1>Chat</h1>
 
                 <label for="msg"><b>Message</b></label>
-                <textarea placeholder="Type message.." name="msg" required></textarea>
+                <textarea placeholder="Type your message.." name="msg" required></textarea>
 
                 <button type="submit" class="btn">Send</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
