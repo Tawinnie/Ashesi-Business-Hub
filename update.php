@@ -14,7 +14,9 @@ if (isset($_POST['update']) && $_POST['update'] == 'Update')
 {
   if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK)
   {
-            // get details of the uploaded file
+               $id=$_GET['id'];
+
+            // get details of the uploaded fil
             $prodname = $_POST["productname"];
             $price = $_POST["price"];
             $location = $_POST["location"];
@@ -43,10 +45,10 @@ if (isset($_POST['update']) && $_POST['update'] == 'Update')
                 if($move_to_folder)
                 {
 
-                    $sql="UPDATE product SET product_name='$prodname', price='$price', image='$fileNameCmps', location='$location', description='$desc' WHERE student_id='$sid'";
+                    $sql="UPDATE product SET product_name='$prodname', price='$price', image='$fileNameCmps', location='$location', description='$desc' WHERE product_id='$id'";
                     $status = mysqli_query($db,$sql);
                     if($status)
-                        header("Location: index.php");
+                        header("Location: Navbar.php");
                 }
                 else
                 {
