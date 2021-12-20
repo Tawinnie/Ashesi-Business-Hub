@@ -3,7 +3,8 @@
 //this is a home page
 //connect to database
 require "dbconnect.php";
-$db=("localhost", "root", "Tawinnie", "business");
+
+$db = mysqli_connect('localhost', 'root', 'Tawinnie', 'business');
 require "server.php";
 
   //session_start(); 
