@@ -98,23 +98,41 @@ if (isset($_POST['login_user']))
     if (count($errors) == 0) 
     {
         $password = md5($password_1);//encrpt password 
-        //select the data into database
+        //select the data from database
         $sql = "SELECT * FROM student WHERE email='$email' AND password='$password'";
 
         $result = mysqli_query($db, $sql);
+        $row = mysqli_fetch_assoc($result);
+        if ($row['email'] === $email && $row['password'] === $password) 
+        {
+            
 
-        if (mysqli_num_rows($result) == 1) 
-        {
-            $_SESSION['username'] = $username;
-  	    $_SESSION['success'] = " ";
-  	  header('location: Navbar.php');
-  	}else 
-        {
-  		array_push($errors, "Wrong username or password");
-  	}
-  }
+               return "";
+
+                $_SESSION['username'] = $row['username'];
+
+                $_SESSION['fullname'] = $row['fullname'];
+
+               $_SESSION['id'] = $row['id'];
+
+                 header("Location: Navbar.php");
+
+                 exit();
+
+             }else
+                 {
+
+                   header("Location: Login.php?error= OOPS SORRY! Incorrect email or password");
+
+                   exit("This email and password does not exist");
+
+                 }
+
+         }else{
+           echo "You are logged in already";
+         }
 }
-
+      
 ?>
         
     
