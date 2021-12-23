@@ -8,6 +8,7 @@ session_start();
 $studentid= "";
 $username = "";
 $email    = "";
+$password="";
 $fullname = "";
 $location = "";
 $errors = array(); 
@@ -90,7 +91,7 @@ if (isset($_POST['login_user']))
     {
         array_push($errors, "Email is required");
     }
-    if (empty($password_1)) 
+    if (empty($password)) 
     {
         array_push($errors, "Password is required");
     }
@@ -107,7 +108,8 @@ if (isset($_POST['login_user']))
         {
             
 
-               return "";
+               echo "email";
+                echo "password";
 
                 $_SESSION['username'] = $row['username'];
 
@@ -129,7 +131,7 @@ if (isset($_POST['login_user']))
                  }
 
          }else{
-           echo "You are logged in already";
+           echo " ";
          }
 }
       
