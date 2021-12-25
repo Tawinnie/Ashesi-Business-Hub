@@ -98,7 +98,7 @@ if (isset($_POST['login_user']))
     //if there are no errors
     if (count($errors) == 0) 
     {
-        //$password = md5($password);//encrpt password 
+        $password = md5($password);//encrpt password 
         //select the data from database
         $sql = "SELECT * FROM student WHERE email='$email' AND password='$password'";
 
@@ -108,8 +108,8 @@ if (isset($_POST['login_user']))
         {
             
 
-               echo "email";
-                echo "password";
+              // echo "email";
+                //echo "password";
 
                 $_SESSION['username'] = $row['username'];
 
