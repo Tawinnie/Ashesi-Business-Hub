@@ -85,7 +85,7 @@ if (isset($_POST['login_user']))
 {
   //get password and email
     $email = mysqli_real_escape_string($db, $_POST['email']);
-    $password_1 = mysqli_real_escape_string($db, $_POST['password']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
   //if the email and password is empty,show an error
     if (empty($email)) 
     {
@@ -98,7 +98,7 @@ if (isset($_POST['login_user']))
     //if there are no errors
     if (count($errors) == 0) 
     {
-        $password = md5($password_1);//encrpt password 
+        //$password = md5($password);//encrpt password 
         //select the data from database
         $sql = "SELECT * FROM student WHERE email='$email' AND password='$password'";
 
