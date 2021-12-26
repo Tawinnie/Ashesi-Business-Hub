@@ -103,37 +103,50 @@ if (isset($_POST['login_user']))
         $sql = "SELECT * FROM student WHERE email='$email' AND password='$password'";
 
         $result = mysqli_query($db, $sql);
-        $row = mysqli_fetch_assoc($result);
-        if ($row['email'] === $email && $row['password'] === $password) 
-        {
+            if (mysqli_num_rows($result)==1)
+            {
+                    $_SESSION['username']=$username;
+                    $_SESSION['success']="Welcome";
+                    header('location: Navbar.php');
+            }else
+            {
+                    array_push($errors, "wrong email or password");
+            }
+    }
+}
+                 
+        
+//             $row = mysqli_fetch_assoc($result);
+//         if ($row['email'] === $email && $row['password'] === $password) 
+//         {
             
 
-              // echo "email";
-                //echo "password";
+//               // echo "email";
+//                 //echo "password";
 
-                $_SESSION['username'] = $row['username'];
+//                 $_SESSION['username'] = $row['username'];
 
-                $_SESSION['fullname'] = $row['fullname'];
+//                 $_SESSION['fullname'] = $row['fullname'];
 
-               $_SESSION['id'] = $row['id'];
+//                $_SESSION['id'] = $row['id'];
 
-                 header("Location: Navbar.php");
+//                  header("Location: Navbar.php");
 
-                 exit();
+//                  exit();
 
-             }else
-                 {
+//              }else
+//                  {
 
-                   header("Location: Login.php?error= OOPS SORRY! Incorrect email or password");
+//                    header("Location: Login.php?error= OOPS SORRY! Incorrect email or password");
 
-                   exit("This email and password does not exist");
+//                    exit("This email and password does not exist");
 
-                 }
+//                  }
 
-         }else{
-           echo " ";
-         }
-}
+//          }else{
+//            echo " ";
+//          }
+//}
       
 ?>
         
