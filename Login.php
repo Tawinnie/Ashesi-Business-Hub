@@ -20,12 +20,12 @@ include('server.php');
   	<h2>Sign in</h2>
   </div>
 	 
-  <form method="POST" action="Login.php">
+  <form method="POST" action="Navbar.php">
 	  <!---the error file checks if the submitted form does ot have erors-->
 		<?php include('errors.php');?>
 		<div class="input-group">
 			<label>Email</label>
-			<input type="text" name="email" required >
+			<input type="email" name="email" required >
 		</div>
 		<div class="input-group">
 			<label>Password</label>
@@ -33,7 +33,7 @@ include('server.php');
 		</div>
 		
 		<div class="input-group">
-			    <button type="submit" class="btn" name="login_user">Log in</button>
+			    <input type="submit" class="btn" name="login_user" value="Login">
 		</div>
 		<p>
 			Don't have account? <a id="non" href="register.php">Sign up</a>
